@@ -83,7 +83,7 @@ MyPnky.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteComma
             }
         } else { trmsg = finm }
         var uren = encodeURI(trmsg)
-        await axios.get('http://api.brainshop.ai/get?bid=159506&key=4QPRlFg6JPdxT8As&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
+        await axios.get('http://api.brainshop.ai/get?bid=163316&key=zUcfrBNdiDTHST4K&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
             var fins = ''                           
             if (conf.LANG !== 'EN') {
                 ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
@@ -117,7 +117,7 @@ MyPnky.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mes
                             }
                         } else { trmsg = finm }
                         var uren = encodeURI(trmsg)
-                        await axios.get('http://api.brainshop.ai/get?bid=159506&key=4QPRlFg6JPdxT8As&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
+                        await axios.get('http://api.brainshop.ai/get?bid=163316&key=zUcfrBNdiDTHST4K&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
                             var fins = ''                           
                             if (conf.LANG !== 'EN') {
                                 ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
@@ -145,7 +145,7 @@ MyPnky.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mes
                         }
                     } else { trmsg = finm }
                     var uren = encodeURI(trmsg)
-                    await axios.get('http://api.brainshop.ai/get?bid=159506&key=4QPRlFg6JPdxT8As&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
+                    await axios.get('http://api.brainshop.ai/get?bid=163316&key=zUcfrBNdiDTHST4K&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
                         var fins = ''                           
                         if (conf.LANG !== 'EN') {
                             ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
@@ -171,7 +171,7 @@ MyPnky.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mes
                     }
                 } else { trmsg = finm }
                 var uren = encodeURI(trmsg)
-                await axios.get('http://api.brainshop.ai/get?bid=159506&key=4QPRlFg6JPdxT8As&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
+                await axios.get('http://api.brainshop.ai/get?bid=163316&key=zUcfrBNdiDTHST4K&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
                     var fins = ''                           
                     if (conf.LANG !== 'EN') {
                         ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
