@@ -36,8 +36,9 @@ async function blockpm() {
 blockpm()
 var plk = ''
 var plk2 = ''
-if (Config.LANG == 'EN') plk = 'sorry chatting in pm is not allowed'
-if (Config.LANG == 'EN') plk2 = '.block'
+if (Config.LANG == 'EN') plk = 'sorry chatting in pm is not allowed(4)'
+if (Config.LANG == 'EN') warn2 = 'you only have 2 warnings ramaining'
+if (Config.LANG == 'EN') warn ='your limit is finished'
 if (Config.LANG == 'ML') plk = 'ക്ഷമിക്കണം PM ൽ ചാറ്റിംഗ് അനുവദനീയമല്ല'
 if (Config.LANG == 'ML') plk2 = '.block'
 if (Config.STANDPLK == 'off' || Config.STANDPLK == 'OFF') {
@@ -54,8 +55,13 @@ MyPnky.addCommand({on: 'text', fromMe: false, onlyPm: true , deleteCommand: fals
     if (pmblock_var == 'true' && message.jid !== '919072790587@s.whatsapp.net') {
         let regex1 = anything
         if (regex1.test(message.message)) {
-           await message.client.sendMessage(message.jid,plk, MessageType.text, {quoted: message.data })
-           await message.client.sendMessage(message.jid,plk2, MessageType.text);
+            let alpha = alpha++;
+             await message.client.sendMessage(message.jid,plk, MessageType.text, {quoted: message.data })
+if(alpha=2)  await message.client.sendMessage(message.jid,warn2, MessageType.text, {quoted: message.data })
+if(alpha=4)  await message.client.sendMessage(message.jid,warn, MessageType.text, {quoted: message.data })
+if(alpha=5){
+  await message.client.sendMessage(message.jid,'.block', MessageType.text, {quoted: message.data })
+}
         }  
     }
 }));
